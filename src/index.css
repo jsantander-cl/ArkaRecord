@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colores */
+  --color-on-surface-variant: #e9bcb5;
+  --color-surface-container-high: #2a2a2a;
+  --color-inverse-primary: #c00000;
+  --color-on-background: #e2e2e2;
+  --color-error-container: #93000a;
+  --color-on-primary-container: #fff7f5;
+  --color-error: #ffb4ab;
+  --color-tertiary: #c6c6c7;
+  --color-surface-dim: #131313;
+  --color-surface: #131313;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-variant: #353535;
+  --color-secondary: #e9c349;
+  --color-secondary-container: #af8d11;
+  --color-background: #131313;
+  --color-outline: #b08781;
+  --color-surface-container-highest: #353535;
+  --color-primary: #ffb4a8;
+  --color-primary-container: #e60000;
+  --color-outline-variant: #5f3f3a;
+  --color-on-surface: #e2e2e2;
+  --color-whatsapp: #25d366;
+  --color-surface-container-low: #1b1b1b;
+  --color-surface-container: #1f1f1f;
+
+  /* Tipografías */
+  --font-display: "Bodoni Moda", serif;
+  --font-body: "Hanken Grotesk", sans-serif;
+
+  /* Espaciados de layout */
+  --spacing-container-max: 1440px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 20px;
+  --spacing-margin-desktop: 80px;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+}
+
+/* Scrollbar oscuro */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-surface-container-lowest); }
+::-webkit-scrollbar-thumb { background: var(--color-surface-variant); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-tertiary); }
+
+/* Respeta accesibilidad de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes kenburns {
+  from { transform: scale(1.05) translate(0, 0); }
+  to { transform: scale(1.15) translate(-1%, -1%); }
+}
+
+@keyframes whatsappPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 0 30px rgba(37, 211, 102, 0.7); }
+}

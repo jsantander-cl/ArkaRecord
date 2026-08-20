@@ -1,0 +1,1 @@
+export const ICONOS_CLIENTES = ["diamond", "architecture", "language", "star", "token"];

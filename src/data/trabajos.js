@@ -1,25 +1,25 @@
 export const TRABAJOS = [
   {
-    titulo: "Neon Pulse",
-    categoria: "Videoclip",
+    titulo: "Eventos en Vivo",
+    categoria: "Producción",
     imagen:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDTTPC9fUwOxRJ3pqlrGAg58WprpYICbC7vTQRddOp8G8-QRiww-W0U11NCufRj5jHzFWjmWw6oyOefjgmt8HXQmTmimHm0WHtnIomLO495r3tu8ZVknvXvmU76TN4iw_GVeHSRBDutBIIyAXlTDrHrBr1G530zuqcp2zFe2Mk1hWf8myHp_8iMScRWu7jk-iDxhBBYYvgNlvD4aG7R6EQ7NGq5hUZNzPrgoj4xWbgum0tyPL3s0ce9",
+      "../public/img/marco.jpg",
     span: "md:col-span-2",
     aspecto: "aspect-[4/5]",
   },
   {
-    titulo: "Behind the Scenes",
-    categoria: "Producción",
+    titulo: "Detras de Cámaras",
+    categoria: "VideoClips",
     imagen:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBvfcHLO_Jd368zBcNwbKuQ6WoIHFEVpSCJ3Fz6VsIjKdJOf_C6OB5GD_-d6kE2t5fm0CKreSHD5fF4oGd4jERkrhV_dUw-9f24peWX6XP_YzxUsvzitIy8sXpS1HHW2ovUp1h3VAcKwbBNQ0jf3VzWFwCg3IEHK23M0WOb34J-fb3XHSweVkKKATk7h6kIS-1xD2YiBHyS-1n10_V9G3kUUlwzMyDXUWjvyTQcEajz9cSMj6FVFyK8",
+      "../public/img/camara.jpg",
     span: "",
     aspecto: "aspect-square",
   },
   {
-    titulo: "Luxury Watch",
+    titulo: "Convenios y Publicidad",
     categoria: "Comercial",
     imagen:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCjSeuMS8ZYQ54fNxBzfbFkx-9xN3sHOIffgXdKzVhMDpkNjJjw7hDhKHR_WcDoqp3bTQL3_qD1fFo43JFq6B7NoQUSceQphXmfrZaGmSloblNkkWyAIillE87F0M0D6eK4E5iWsPAyY2BMhJBskIzL7e92ee59Eebe1b3S75pndnUJOq3pAfSxSr5gZVjHvkjCyg2_HEG45VhmE2ffP1yL_duQ-Wunq7p_WJ55SXqgxMc5exdbnn4m",
+      "../public/img/comercial.webp",
     span: "",
     aspecto: "aspect-square",
   },

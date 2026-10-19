@@ -1,0 +1,54 @@
+C:\Users\HP PRO BOOK\Desktop\FRONTEND\PROYECTOS\Arka-Record
+├── eslint.config.js
+├── index.html
+├── node_modules
+|  ├── @eslint
+|  ├── @gsap
+|  ├── @tailwindcss
+|  ├── @types
+|  ├── @vitejs
+├── package.json
+├── pnpm-lock.yaml
+├── public
+|  ├── favicon.svg
+|  ├── icons.svg
+|  └── img
+|     ├── camara.jpg
+|     ├── comercial.webp
+|     ├── logo.jpg
+|     └── marco.jpg
+├── README.md
+├── src
+|  ├── App.jsx
+|  ├── assets
+|  |  ├── hero.png
+|  |  ├── react.svg
+|  |  └── vite.svg
+|  ├── components
+|  |  ├── About.jsx
+|  |  ├── Clients.jsx
+|  |  ├── Footer.jsx
+|  |  ├── Gallery.jsx
+|  |  ├── GSAPReveal.jsx
+|  |  ├── Header.jsx
+|  |  ├── Hero.jsx
+|  |  ├── Reveal.jsx
+|  |  ├── Services.jsx
+|  |  ├── SocialIcons.jsx
+|  |  ├── WhatsAppButton.jsx
+|  |  └── WhatsAppIcon.jsx
+|  ├── data
+|  |  ├── clientes.js
+|  |  ├── empresa.js
+|  |  ├── navegacion.js
+|  |  ├── servicios.js
+|  |  └── trabajos.js
+|  ├── hooks
+|  |  ├── useActiveSection.js
+|  |  └── useScrollReveal.js
+|  ├── index.css
+|  └── main.jsx
+└── vite.config.js
+
+directory: 13 file: 37 symboliclink: 15
+

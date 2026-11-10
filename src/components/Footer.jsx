@@ -1,79 +1,92 @@
-import { EMPRESA } from "../data/empresa.js";
+import { EMPRESA } from "../data/empresa";
 import { FacebookIcon, InstagramIcon, YouTubeIcon } from "./SocialIcons.jsx";
 
 export default function Footer() {
   return (
-    <footer id="contacto" className="bg-surface-container-lowest border-t border-secondary/20 pt-16 pb-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-5 md:px-20 py-12 w-full max-w-[1440px] mx-auto">
-        <div className="flex flex-col gap-4">
-          <span className="font-display text-xl text-on-surface uppercase tracking-[0.2em]">
+    <footer id="contacto" className="bg-[#0a0a0a] text-[#f5f5f5]">
+      {/* Banner CTA estilo Signal (Imagen 2) */}
+      <section className="bg-[#d48c1a] py-20 px-6 md:px-12 text-center text-[#0a0a0a]">
+        <div className="max-w-3xl mx-auto">
+          {/* Headline principal en Space Grotesk 700 */}
+          <h2 className="font-['Space_Grotesk'] font-bold text-3xl sm:text-5xl md:text-6xl tracking-tight uppercase leading-none mb-4">
+            ¿LISTO PARA DAR VIDA A TU PROYECTO?
+          </h2>
+
+          {/* Subtítulo en Space Grotesk 300 */}
+          <p className="font-['Space_Grotesk'] font-light text-base md:text-lg opacity-80 max-w-xl mx-auto mb-3">
+            Escríbenos directamente a nuestro WhatsApp o correo para recibir asesoría personalizada sobre tu producción.
+          </p>
+
+          <p className="font-['Inter'] text-xs uppercase tracking-wider opacity-60 mb-8">
+            Respuesta inmediata · Asesoría profesional
+          </p>
+
+          {/* Formulario / CTA estilo Newsletter Signal */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
+            <a
+              href={EMPRESA.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto bg-[#0a0a0a] hover:bg-[#1f1f1f] text-[#f5f5f5] font-['Inter'] font-semibold text-sm px-8 py-3.5 rounded-sm transition-colors text-center whitespace-nowrap shadow-lg"
+            >
+              Contactar por WhatsApp
+            </a>
+          </div>
+
+          <p className="font-['Inter'] text-xs opacity-60 mt-4">
+            Sin compromiso. Presupuestos a medida para marcas y artistas.
+          </p>
+        </div>
+      </section>
+
+      {/* Footer inferior */}
+      <div className="border-t border-[#1f1f1f] py-16 px-6 md:px-16 max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+        {/* Brand */}
+        <div>
+          <span className="font-['Space_Grotesk'] font-bold text-lg text-[#d48c1a] tracking-tight uppercase block mb-2">
             {EMPRESA.nombre}
           </span>
-          <p className="font-body text-on-surface-variant max-w-xs">
-            Producción audiovisual de alto impacto. Capturando la esencia de tu visión con
-            calidad cinematográfica.
+          <p className="font-['Inter'] text-xs text-[#6a6a6a] max-w-xs leading-relaxed">
+            Producción audiovisual de alto impacto y estudio de grabación profesional.
           </p>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <h4 className="font-display text-lg text-white">Contacto</h4>
-          
-          <a
-            className="font-body text-on-surface-variant hover:text-secondary transition-colors duration-300"
-            href={`mailto:${EMPRESA.email}`}
-          >
-            {EMPRESA.email}
-          </a>
-          
-          <a
-            className="font-body text-on-surface-variant hover:text-secondary transition-colors duration-300"
-            href={`tel:${EMPRESA.telefono.replace(/[^+\d]/g, "")}`}
-          >
-            {EMPRESA.telefono}
-          </a>
+        {/* Contacto Directo */}
+        <div>
+          <h4 className="font-['Space_Grotesk'] font-bold text-sm text-[#f5f5f5] uppercase tracking-wider mb-4">
+            Contacto Directo
+          </h4>
+          <div className="flex flex-col gap-2 font-['Inter'] text-sm">
+            <a href={`mailto:${EMPRESA.email}`} className="text-[#8c8c8c] hover:text-[#d48c1a] transition-colors">
+              {EMPRESA.email}
+            </a>
+            <a href={`tel:${EMPRESA.telefono.replace(/[^+\d]/g, "")}`} className="text-[#8c8c8c] hover:text-[#d48c1a] transition-colors">
+              {EMPRESA.telefono}
+            </a>
+          </div>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <h4 className="font-display text-lg text-white">Síguenos</h4>
+        {/* Redes Sociales */}
+        <div>
+          <h4 className="font-['Space_Grotesk'] font-bold text-sm text-[#f5f5f5] uppercase tracking-wider mb-4">
+            Redes Sociales
+          </h4>
           <div className="flex gap-4">
-            
-            <a
-              href={EMPRESA.redes.facebook}
-              target="_blank"
-              rel="noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-on-surface-variant hover:text-primary hover:border-primary/50 hover:-translate-y-1 transition-all duration-300"
-              aria-label="Facebook"
-            >
+            <a href={EMPRESA.redes.facebook} target="_blank" rel="noreferrer" className="text-[#8c8c8c] hover:text-[#d48c1a] transition-colors">
               <FacebookIcon className="w-5 h-5" />
             </a>
-            
-            <a
-              href={EMPRESA.redes.instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-on-surface-variant hover:text-primary hover:border-primary/50 hover:-translate-y-1 transition-all duration-300"
-              aria-label="Instagram"
-            >
+            <a href={EMPRESA.redes.instagram} target="_blank" rel="noreferrer" className="text-[#8c8c8c] hover:text-[#d48c1a] transition-colors">
               <InstagramIcon className="w-5 h-5" />
             </a>
-            
-            <a
-              href={EMPRESA.redes.youtube}
-              target="_blank"
-              rel="noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-on-surface-variant hover:text-primary hover:border-primary/50 hover:-translate-y-1 transition-all duration-300"
-              aria-label="YouTube"
-            >
+            <a href={EMPRESA.redes.youtube} target="_blank" rel="noreferrer" className="text-[#8c8c8c] hover:text-[#d48c1a] transition-colors">
               <YouTubeIcon className="w-5 h-5" />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="text-center mt-12 px-5">
-        <p className="font-body text-on-surface-variant/50 text-sm">
-          © {new Date().getFullYear()} {EMPRESA.nombre}. Todos los derechos reservados.
-        </p>
+      <div className="border-t border-[#1f1f1f] py-6 text-center font-['Inter'] text-xs text-[#4a4a4a]">
+        © {new Date().getFullYear()} {EMPRESA.nombre}. Todos los derechos reservados.
       </div>
     </footer>
   );

@@ -14,9 +14,6 @@ export default function Gallery() {
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
 
-      // El scroll cinematográfico (pin + horizontal scrub) solo se activa en
-      // pantallas medianas en adelante. En mobile respetamos un layout
-      // vertical simple: mejor UX táctil y evita pins problemáticos en iOS.
       mm.add(
         {
           isDesktop: "(min-width: 768px)",
@@ -29,16 +26,8 @@ export default function Gallery() {
           const track = trackRef.current;
           const panels = panelsRef.current;
 
-          // Usamos funciones en vez de valores fijos: así GSAP recalcula el
-          // ancho real del track y el rango de scroll en cada "refresh"
-          // (resize de ventana, rotación de dispositivo, etc). Si dejáramos
-          // un número fijo calculado solo al montar, al redimensionar la
-          // ventana el track quedaría desincronizado del ancho real de los
-          // paneles y las imágenes se verían estiradas/descuadradas.
           const getTotalScroll = () => track.scrollWidth - window.innerWidth;
 
-          // Desplazamiento horizontal maestro: la "cinta" de trabajos se
-          // mueve en el eje X en función del scroll vertical del usuario.
           const scrollTween = gsap.to(track, {
             x: () => -getTotalScroll(),
             ease: "none",
@@ -53,9 +42,6 @@ export default function Gallery() {
             },
           });
 
-          // Efecto "cámara": cada panel entra con un zoom-out sutil y su
-          // texto hace fade+slide, todo sincronizado (scrub) con el mismo
-          // scroll maestro, como si la cámara hiciera focus pieza por pieza.
           panels.forEach((panel) => {
             if (!panel) return;
             const img = panel.querySelector(".gallery-img");
@@ -126,8 +112,9 @@ export default function Gallery() {
             ref={(el) => (panelsRef.current[i] = el)}
             className="relative group overflow-hidden aspect-square md:aspect-auto md:h-screen md:w-screen shrink-0"
           >
+            {/* Única modificación: inset-x-0 bottom-0 top-0 md:top-[64px] */}
             <div
-              className="gallery-img absolute inset-0 bg-cover bg-center bg-no-repeat max-md:transition-transform max-md:duration-700 max-md:group-hover:scale-105"
+              className="gallery-img absolute inset-x-0 bottom-0 top-0 md:top-[64px] bg-cover bg-center bg-no-repeat max-md:transition-transform max-md:duration-700 max-md:group-hover:scale-105"
               style={{ backgroundImage: `url('${trabajo.imagen}')` }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40" />
